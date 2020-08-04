@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/Andrey88-rts/Children-s-rest#readme",
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "browser-sync": "^2.26.12",
+    "gulp": "^4.0.2",
+    "gulp-ttf2eot": "^1.1.2",
+    "gulp-ttf2woff": "^1.1.1",
+    "gulp-ttf2woff2": "^3.0.0"
   }
 }
