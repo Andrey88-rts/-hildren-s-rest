@@ -43,3 +43,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
+.navbar__logo {
+  background: url("../img/bg_header.png") 0 0 no-repeat;
+}

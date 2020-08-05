@@ -7,9 +7,16 @@ const ttf2woff2 = require("gulp-ttf2woff2");
 const ttf2woff = require("gulp-ttf2woff");
 const ttf2eot = require("gulp-ttf2eot");
 const browsersync = require("browser-sync").create();
-const del = require('del');
-const sass = require('gulp-sass');
-const autoprefixer = require('gulp-autoprefixer');
+const del = require("del");
+const sass = require("gulp-sass");
+const autoprefixer = require("gulp-autoprefixer");
+const groupMediaCss = require("gulp-group-css-media-queries");
+const cleanCSS = require("gulp-clean-css");
+const rename = require("gulp-rename");
+const imageMin = require("gulp-imagemin");
+const webP = require('gulp-webp');
+const webpHTML = require('gulp-webp-html');
+
 
 function browserSync() {
   browsersync.init({
@@ -33,28 +40,61 @@ gulp.task("fonts", function () {
 
 function html() {
   return src("#src/*.html")
+    .pipe(webpHTML())
     .pipe(dest(output))
     .pipe(browsersync.stream());
 }
 
 function css() {
   return src("#src/sass/style.sass")
-    .pipe(sass(
+    .pipe(
+      sass({
+        outputStyle: "expanded",
+      })
+    )
+    .pipe(groupMediaCss())
+    .pipe(
+      autoprefixer({
+        cascade: true,
+        overrideBrowserslist: ["last 5 version"],
+      })
+    )
+    
+    .pipe(dest(output + "/css/"))
+    .pipe(cleanCSS())
+    .pipe(
+      rename({
+        extname: ".min.css",
+      })
+    )
+    .pipe(dest(output + "/css/"))
+    .pipe(browsersync.stream());
+}
+
+function image() {
+  return src("#src/img/**/*.{jpg,png,svg,gif,ico,webp}")
+    .pipe(webP({
+      quality: 70
+    }))
+    .pipe(dest(output + "/img/"))
+    .pipe(src("#src/img/**/*.{jpg,png,svg,gif,ico,webp}"))
+    .pipe(imageMin(
       {
-        outputStyle: "expanded"        
+        progressive: true,
+        svgoPlugins: [{removeViewBox: false}],
+        interlaced: true,
+        optimizationLevel: 3
       }
     ))
-    .pipe(autoprefixer({
-      cascade: true,
-      overrideBrowserslist: ["last 5 version"]
-    }))
-    .pipe(dest(output+"/css/"))
+    .pipe(dest(output + "/img/"))
     .pipe(browsersync.stream());
 }
 
 function norm() {
   return src("node_modules/normalize.css/normalize.css")
-    .pipe(dest(output+"/css/"));
+    .pipe(
+      dest(output + "/css/")
+    );
 }
 
 function clean() {
@@ -64,11 +104,14 @@ function clean() {
 function watchFiles(params) {
   gulp.watch(["#src/*.html"], html);
   gulp.watch(["#src/sass/**/*.sass"], css);
+  gulp.watch(["#src/img/**/*.{jpg,png,svg,gif,ico,webp}"], image);
+
 }
 
-const out = gulp.series(clean, gulp.parallel(norm, css, html));
+const out = gulp.series(clean, gulp.parallel(norm, image, css, html));
 const watch = gulp.parallel(out, watchFiles, browserSync);
 
+exports.image = image;
 exports.norm = norm;
 exports.css = css;
 exports.html = html;
