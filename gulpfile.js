@@ -16,6 +16,7 @@ const rename = require("gulp-rename");
 const imageMin = require("gulp-imagemin");
 const webP = require('gulp-webp');
 const webpHTML = require('gulp-webp-html');
+const webpCSS = require('gulp-webp-css');
 
 
 function browserSync() {
@@ -59,7 +60,7 @@ function css() {
         overrideBrowserslist: ["last 5 version"],
       })
     )
-    
+    .pipe(webpCSS())
     .pipe(dest(output + "/css/"))
     .pipe(cleanCSS())
     .pipe(
@@ -105,7 +106,6 @@ function watchFiles(params) {
   gulp.watch(["#src/*.html"], html);
   gulp.watch(["#src/sass/**/*.sass"], css);
   gulp.watch(["#src/img/**/*.{jpg,png,svg,gif,ico,webp}"], image);
-
 }
 
 const out = gulp.series(clean, gulp.parallel(norm, image, css, html));

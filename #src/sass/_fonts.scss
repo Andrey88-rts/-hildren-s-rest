@@ -5,7 +5,7 @@
     url("../fonts/Circe-Regular.woff") format("woff"),
     url("../fonts/Circe-Regular.woff2") format("woff2"),
     url("../fonts/Circe-Regular.ttf") format("truetype");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -16,7 +16,7 @@
     url("../fonts/Circe-Light.woff") format("woff"),
     url("../fonts/Circe-Light.woff2") format("woff2"),
     url("../fonts/Circe-Light.ttf") format("truetype");
-  font-weight: normal;
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -27,7 +27,7 @@
     url("../fonts/Circe-Bold.woff") format("woff"),
     url("../fonts/Circe-Bold.woff2") format("woff2"),
     url("../fonts/Circe-Bold.ttf") format("truetype");
-  font-weight: normal;
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -38,22 +38,26 @@
     url("../fonts/RobotoSlab-Bold.woff") format("woff"),
     url("../fonts/RobotoSlab-Bold.woff2") format("woff2"),
     url("../fonts/RobotoSlab-Bold.ttf") format("truetype");
-  font-weight: normal;
+  font-weight: 700;
   font-style: normal;
 }
 
 @mixin circe_reg {
   font-family: "Circe Regular", sans-serif;
+  font-weight: 400;
 }
 
 @mixin circe_light {
   font-family: "Circe Light", sans-serif;
+  font-weight: 300;
 }
 
 @mixin circe_b {
-  font-family: "Circe-Bold", sans-serif;
+  font-family: "Circe Bold", sans-serif;
+  font-weight: 700;
 }
 
 @mixin rbb {
-  font-family: "RobotoSlab-Bold", sans-serif;
+  font-family: "Roboto Slab Bold", sans-serif;
+  font-weight: 700;
 }
