@@ -20,8 +20,7 @@
   display: flex
   align-items: start 
   &__text
-    max-width: 450px
-      
+    max-width: 450px      
   &__title, &__subtitle
     color: $primary
   &__title
@@ -36,6 +35,53 @@
       margin-top: 11px
 .shield__size, .voucher__size
   margin-bottom: 30px
-
 .image__size
   margin-right: 30px
+
+
+
+.section-form
+  background: url("../img/bg_sec_form.png") 0 0 no-repeat
+.form
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding-top: 100px
+  padding-bottom: 92px  
+  &__text
+    margin-top: 29px
+    margin-bottom: 60px
+    font-size: 22px
+    color: $primary
+    +circe_b
+  &__subtext
+    margin-top: 60px
+    margin-bottom: 40px
+    font-size: 16px
+    color: $primary
+    +circe_light
+  &-call
+    display: flex
+    align-items: center
+    &__text
+      font-size: 16px
+      +circe_light
+      color: $primary
+    &__size
+      margin-top: 40px
+    &__text-size
+      margin-right: 32px 
+    &__image-size
+      margin-right: 15px
+
+.form-search
+  &__name, &__phone
+    margin-right: 30px
+    padding-left: 61px
+    background-repeat: no-repeat
+    background-position: top 19px left 30px
+  &__name
+    background-image: url(../img/avatar-1.png)   
+  &__phone
+    background-image: url(../img/telephone-1.png)
+  
