@@ -17,6 +17,7 @@ const imageMin = require("gulp-imagemin");
 const webP = require('gulp-webp');
 const webpHTML = require('gulp-webp-html');
 const webpCSS = require('gulp-webp-css');
+const cleanDir = require('gulp-clean-dir');
 
 
 function browserSync() {
@@ -77,6 +78,7 @@ function image() {
     .pipe(webP({
       quality: 70
     }))
+    .pipe(cleanDir(output + "/img/"))
     .pipe(dest(output + "/img/"))
     .pipe(src("#src/img/**/*.{jpg,png,svg,gif,ico,webp}"))
     .pipe(imageMin(
@@ -87,6 +89,7 @@ function image() {
         optimizationLevel: 3
       }
     ))
+    .pipe(cleanDir(output + "/img/"))
     .pipe(dest(output + "/img/"))
     .pipe(browsersync.stream());
 }
