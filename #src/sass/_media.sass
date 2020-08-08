@@ -5,11 +5,21 @@
   .container
     max-width: 1140px
   .section-child-rest
-    background: url('../img/bg_header.jpg') top 0 left -250px no-repeat 
-  
-  
+    background: url('../img/bg_header.jpg') top 0 left -250px no-repeat  
   .button__consult-size
     margin-top: 0px
+  .catalog
+    &-tabs
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      align-items: center      
+      &__item
+        width: 90%
+    &-content, &-line
+      display: none
+
+    
 @media screen and (max-width: 992px) 
   .container
     max-width: 960px
@@ -34,7 +44,8 @@
     justify-content: center
   .form-search__name
     margin-bottom: 30px
-    
+  .catalog__subtitle-size
+    margin-bottom: 15px
 @media screen and (max-width: 768px) 
   .container
     max-width: 720px
@@ -72,6 +83,9 @@
       margin-bottom: 15px
   .form        
     padding-bottom: 40px
+  .catalog
+    padding-top: 30px
+    padding-bottom: 30px
 @media screen and (max-width: 576px)
   .container
     max-width: 100%
@@ -92,7 +106,7 @@
     margin-left: 0px
     margin-right: 5px
   .form    
-    padding-top: 70px
+    padding-top: 100px
     padding-left: 10px
     padding-right: 10px
   .form__title
@@ -109,6 +123,9 @@
       margin-right: 20px 
     &__image-size
       margin-right: 0  
+  .catalog
+    padding-top: 30px
+    padding-bottom: 30px
 @media screen and (max-width: 320px)
   .navbar__title
     display: none
