@@ -18,8 +18,33 @@
         width: 90%
     &-content, &-line
       display: none
-
-    
+  .armor-images_visible1
+    display: none
+  .armor-images
+    position: relative
+    display: flex
+    justify-content: center
+    &__back    
+      &-left
+        position: absolute
+        top: 80px
+        left: 142px        
+      &-right
+        position: absolute
+        top: 80px
+        right: 142px
+  .armor
+    &-properties
+      justify-content: center
+    &-form
+      margin-left: 20px
+      margin-right: 20px
+      background-image: url(../img/bgc_girl.png)
+      background-repeat: no-repeat
+      background-position: top -500px left -1000px
+       
+  .armor-content__text  
+    width: 90%   
 @media screen and (max-width: 992px) 
   .container
     max-width: 960px
@@ -46,6 +71,24 @@
     margin-bottom: 30px
   .catalog__subtitle-size
     margin-bottom: 15px
+  .armor-images_visible2
+    display: none
+  .armor
+    &-form
+      margin-left: 20px
+      margin-right: 20px
+      background-image: url(../img/bgc_girl.png)
+      background-repeat: no-repeat
+      background-position: top 200% left -1500px
+      
+    &-properties
+      flex-direction: column
+      justify-content: space-between
+      align-items: center
+  .armor-properties__item-size
+    margin-bottom: 50px
+    &:last-child
+      margin-bottom: 0
 @media screen and (max-width: 768px) 
   .container
     max-width: 720px
@@ -86,6 +129,10 @@
   .catalog
     padding-top: 30px
     padding-bottom: 30px
+  .armor-images_visible3
+    display: none
+  .armor-images__back-left
+    display: none
 @media screen and (max-width: 576px)
   .container
     max-width: 100%
@@ -126,6 +173,8 @@
   .catalog
     padding-top: 30px
     padding-bottom: 30px
+  .armor-form__call-size
+    margin-bottom: 15px
 @media screen and (max-width: 320px)
   .navbar__title
     display: none

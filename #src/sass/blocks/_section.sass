@@ -151,10 +151,6 @@
       &:hover
         border-bottom: 6px solid $colorButton
         background-color: $colorButton
-        
-        
-        
-
   &-info
     position: absolute
     display: flex
@@ -173,12 +169,8 @@
       font-size: 13px
       display: block
       +circe_reg
-    
-
   &-line
     border: 5px solid $colorButton
-
-
 .context
   position: absolute
   width: 340px
@@ -186,12 +178,89 @@
   background: linear-gradient(to top, #001e28, transparent)  
   bottom: 0
   left: 0
-
 .foto__size
   margin-right: 9px
-
 .content__size
   margin-top: 40px
 .active__item
   background-color: $colorButton
   color: #fff
+
+
+.section-armor
+  background-image: linear-gradient(to bottom, #d8f0f0, #fdfde0)
+.armor
+  padding-top: 100px
+  padding-bottom: 100px  
+  &-content
+    &__title
+      text-align: center
+    &__text
+      width: 730px
+      line-height: 1.86
+      text-align: center
+      margin: auto
+  &__size
+    margin-top: 29px
+    // margin-bottom: 78px    
+  &__text-form
+    margin: 0
+    margin-top: 70px
+    font-size: 22px
+    +circe_b
+  &__subtext-form
+    font-size: 16px
+    +circe_light
+    margin-top: 30px
+    margin-bottom: 40px
+  &-images
+    position: relative    
+    display: flex
+    justify-content: space-between
+    &__item
+      margin-right: 30px    
+    &__size
+      margin-bottom: 70px
+      margin-top: 70px
+    &__back    
+      &-left
+        position: absolute
+        top: 80px
+        left: 21px
+        padding: 11px 15px
+        background-color: rgba(255,255,255,0.6)
+        &:hover
+          cursor: pointer
+      &-right
+        position: absolute
+        top: 80px
+        right: 21px
+        padding: 11px 15px
+        background-color: rgba(255,255,255,0.6)
+        &:hover
+          cursor: pointer
+  &-properties
+    display: flex
+    justify-content: space-between    
+    &__size
+      margin-bottom: 70px
+    &__image-size
+      margin-right: 30px
+    &__item
+      display: flex
+      align-items: center
+    &__text
+      width: 212px  
+  &__cost
+    background-color: $colorButton
+    padding: 4px
+  &-form        
+    border: 10px solid #d8f0f0    
+    background-image: url(../img/bgc_girl.png)
+    background-repeat: no-repeat
+    background-position: 0 0
+    display: flex
+    flex-direction: column
+    align-items: center
+
+
