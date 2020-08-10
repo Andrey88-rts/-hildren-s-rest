@@ -262,5 +262,70 @@
     display: flex
     flex-direction: column
     align-items: center
+    
+
+
+.section-citizenship
+  background-color: #ffffff
+.citizenship
+  padding-top: 100px
+  padding-bottom: 100px
+  &-content
+    display: flex
+    justify-content: center
+    align-items: start
+  &-images   
+    position: relative
+    z-index: 3
+    &__background
+      position: absolute
+      background-image: url(../img/10.png)
+      left: 120px
+      top: -16px
+      z-index: 0
+      border: solid 15px #d8f0f0
+  &__image
+    margin-right: 33px
+  &-text
+    &__title
+      color: $primary
+      width: 494px
+      margin-bottom: 70px
+    &__text
+      width: 435px
+      margin-top: 0
+      margin-bottom: 68px
+      font-size: 20px
+      color: $primary
+      +circe_reg
+    &__subtext
+      width: 360px
+      margin-top: 0
+      margin-bottom: 26px
+      font-size: 22px
+      color: $primary
+      +circe_b
+    &__subtitle
+      margin: 0
+      margin-bottom: 70px
+      font-size: 20px
+      color: $primary
+      +circe_reg
+      width: 500px
+  &-form
+    display: flex
+    flex-direction: column
+    align-items: center
+    border: solid 10px #d8f0f0
+    background-image: url(../img/bgc_tube.png)
+    background-repeat: no-repeat
+    background-position: bottom 0 right 0
+    &__size
+      margin-bottom: 70px
+  &__subtext-form
+    text-align: center
+    line-height: 1.69
+
+
 
 

@@ -44,7 +44,8 @@
       background-position: top -500px left -1000px
        
   .armor-content__text  
-    width: 90%   
+    width: 90%
+     
 @media screen and (max-width: 992px) 
   .container
     max-width: 960px
@@ -79,8 +80,7 @@
       margin-right: 20px
       background-image: url(../img/bgc_girl.png)
       background-repeat: no-repeat
-      background-position: top 200% left -1500px
-      
+      background-position: top 200% left -1500px      
     &-properties
       flex-direction: column
       justify-content: space-between
@@ -89,6 +89,17 @@
     margin-bottom: 50px
     &:last-child
       margin-bottom: 0
+  .citizenship
+    &-content
+      flex-direction: column
+      align-items: center
+      
+      
+    &-text
+      display: flex
+      flex-direction: column
+      align-items: center        
+      
 @media screen and (max-width: 768px) 
   .container
     max-width: 720px
@@ -133,6 +144,35 @@
     display: none
   .armor-images__back-left
     display: none
+  .citizenship
+    &-content
+      flex-direction: column
+      align-items: center
+      
+    &-text
+      display: flex
+      flex-direction: column
+      align-items: center        
+      &__title
+        width: 90%        
+        margin-top: 40px
+        text-align: center
+      &__text
+        width: 90%
+        margin-top: 0
+        margin-bottom: 26px              
+      &__subtext
+        width: 90%    
+        text-align: center    
+      &__subtitle
+        width: 90%
+        margin-bottom: 70px
+    &-form
+      padding-left: 20px
+      padding-right: 20px
+      background-image: url(../img/bgc_girl.png)
+      background-repeat: no-repeat
+      background-position: top 200% left -1500px
 @media screen and (max-width: 576px)
   .container
     max-width: 100%

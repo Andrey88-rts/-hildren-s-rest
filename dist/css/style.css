@@ -657,6 +657,107 @@
           align-items: center;
 }
 
+.section-citizenship {
+  background-color: #ffffff;
+}
+
+.citizenship {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.citizenship-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.citizenship-images {
+  position: relative;
+  z-index: 3;
+}
+
+.citizenship-images__background {
+  position: absolute;
+  background-image: url(../img/10.png);
+  left: 120px;
+  top: -16px;
+  z-index: 0;
+  border: solid 15px #d8f0f0;
+}
+
+.citizenship__image {
+  margin-right: 33px;
+}
+
+.citizenship-text__title {
+  color: #001e28;
+  width: 494px;
+  margin-bottom: 70px;
+}
+
+.citizenship-text__text {
+  width: 435px;
+  margin-top: 0;
+  margin-bottom: 68px;
+  font-size: 20px;
+  color: #001e28;
+  font-family: "Circe Regular", sans-serif;
+  font-weight: 400;
+}
+
+.citizenship-text__subtext {
+  width: 360px;
+  margin-top: 0;
+  margin-bottom: 26px;
+  font-size: 22px;
+  color: #001e28;
+  font-family: "Circe Bold", sans-serif;
+  font-weight: 700;
+}
+
+.citizenship-text__subtitle {
+  margin: 0;
+  margin-bottom: 70px;
+  font-size: 20px;
+  color: #001e28;
+  font-family: "Circe Regular", sans-serif;
+  font-weight: 400;
+  width: 500px;
+}
+
+.citizenship-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: solid 10px #d8f0f0;
+  background-image: url(../img/bgc_tube.png);
+  background-repeat: no-repeat;
+  background-position: bottom 0 right 0;
+}
+
+.citizenship-form__size {
+  margin-bottom: 70px;
+}
+
+.citizenship__subtext-form {
+  text-align: center;
+  line-height: 1.69;
+}
+
 @media screen and (max-width: 1920px) {
   .section-form {
     background: url("../img/bg_sec_form.png") top 0 left -1000px no-repeat;
@@ -827,6 +928,29 @@
   .armor-properties__item-size:last-child {
     margin-bottom: 0;
   }
+
+  .citizenship-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .citizenship-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -912,6 +1036,59 @@
 
   .armor-images__back-left {
     display: none;
+  }
+
+  .citizenship-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .citizenship-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .citizenship-text__title {
+    width: 90%;
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  .citizenship-text__text {
+    width: 90%;
+    margin-top: 0;
+    margin-bottom: 26px;
+  }
+
+  .citizenship-text__subtext {
+    width: 90%;
+    text-align: center;
+  }
+
+  .citizenship-text__subtitle {
+    width: 90%;
+    margin-bottom: 70px;
+  }
+
+  .citizenship-form {
+    padding-left: 20px;
+    padding-right: 20px;
+    background-image: url(../img/bgc_girl.png);
+    background-repeat: no-repeat;
+    background-position: top 200% left -1500px;
   }
 }
 
@@ -1021,6 +1198,8 @@
 .form-search__name{background-image:url(../img/avatar-1.webp)}
 .form-search__phone{background-image:url(../img/telephone-1.webp)}
 .armor-form{background-image:url(../img/bgc_girl.webp)}
+.citizenship-images__background{background-image:url(../img/10.webp)}
+.citizenship-form{background-image:url(../img/bgc_tube.webp)}
 }
 
  @media screen and (max-width: 1920px){
@@ -1052,6 +1231,7 @@
 
 @supports (-webkit-appearance:none){
 .section-child-rest{background:url("../img/bg_header.webp") top 0 left 250px no-repeat}
+.citizenship-form{background-image:url(../img/bgc_girl.webp)}
 }
 
 }
