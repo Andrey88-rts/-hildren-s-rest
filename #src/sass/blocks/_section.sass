@@ -188,7 +188,7 @@
 
 
 .section-armor
-  background-image: linear-gradient(to bottom, #d8f0f0, #fdfde0)
+  background-image: linear-gradient(to right bottom, #d8f0f0, #fdfde0)  
 .armor
   padding-top: 100px
   padding-bottom: 100px  
@@ -327,5 +327,40 @@
     line-height: 1.69
 
 
-
+.section-comfort
+  background-image: linear-gradient(to right bottom, #d8f0f0, #fdfde0)
+.comfort
+  padding-top: 100px
+  padding-bottom: 100px
+  &-text
+    max-width: 400px
+  &-text__size
+    margin-right: 48px
+  &-content
+    display: flex
+    flex-direction: column   
+  &-row
+    display: flex
+    justify-content: space-between
+    align-items: start    
+  &-title
+    text-align: center    
+    &__size
+      margin-bottom: 100px
+  &-item
+    display: flex    
+    align-items: start    
+    &__size      
+      margin-bottom: 88px
+    &__image
+      margin-right: 50px
+    &__title      
+      +circe_b
+      font-size: 22px
+    &__text      
+      font-size: 17px
+      margin: 0
+      margin-top: 29px
+      +circe_light
+      
 
