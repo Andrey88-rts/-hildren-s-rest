@@ -119,8 +119,14 @@
   .leader
     &-subtitle__size, &-command__size
       margin-bottom: 30px
-
-
+  .license
+    &-row
+      flex-wrap: wrap      
+      justify-content: center
+      &__item
+        &-size
+          margin-right: 20px
+          margin-bottom: 30px
       
 @media screen and (max-width: 768px) 
   .container
@@ -283,7 +289,14 @@
           margin-bottom: 0
     &-arrow
       display: none
-    
+  .license
+    &-row
+      flex-direction: column
+      align-items: center
+      &__item
+        &-size
+          margin-right: 0px
+          margin-bottom: 30px
 
 @media screen and (max-width: 320px)
   .navbar__title

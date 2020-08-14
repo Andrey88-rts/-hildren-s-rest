@@ -1136,6 +1136,58 @@
   cursor: pointer;
 }
 
+.section-license {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#d8f0f0), to(#fdfde0));
+  background-image: -o-linear-gradient(left top, #d8f0f0, #fdfde0);
+  background-image: linear-gradient(to right bottom, #d8f0f0, #fdfde0);
+}
+
+.license {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.license-title__size {
+  margin-bottom: 100px;
+}
+
+.license-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.license-row__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.license-row__image {
+  border: solid 15px #cce9e6;
+  margin-bottom: 30px;
+}
+
+.license-row__text {
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 250px;
+  text-align: center;
+}
+
 @media screen and (max-width: 1920px) {
   .section-form {
     background: url("../img/bg_sec_form.png") top 0 left -1000px no-repeat;
@@ -1369,6 +1421,19 @@
 
   .leader-subtitle__size,
   .leader-command__size {
+    margin-bottom: 30px;
+  }
+
+  .license-row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .license-row__item-size {
+    margin-right: 20px;
     margin-bottom: 30px;
   }
 }
@@ -1683,6 +1748,21 @@
 
   .step-arrow {
     display: none;
+  }
+
+  .license-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .license-row__item-size {
+    margin-right: 0px;
+    margin-bottom: 30px;
   }
 }
 
