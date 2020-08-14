@@ -1,11 +1,16 @@
 @media screen and ( max-width: 1920px )
   .section-form
     background: url("../img/bg_sec_form.png") top 0 left -1000px no-repeat
+  
 @media screen and ( max-width: 1200px )
   .container
     max-width: 1140px
   .section-child-rest
-    background: url('../img/bg_header.jpg') top 0 left -250px no-repeat  
+    background: url('../img/bg_header.jpg') top 0 left -250px no-repeat
+  .section-foto
+    flex-wrap: wrap
+    justify-content: center
+    align-items: start  
   .button__consult-size
     margin-top: 0px
   .catalog
@@ -267,7 +272,18 @@
       &__image-size
         margin-bottom: 15px
         margin-right: 0
-
+  .step
+    &-row
+      flex-direction: column
+      align-items: center
+      margin-bottom: 0
+      &__item 
+        margin-bottom: 25px
+        &:last-child
+          margin-bottom: 0
+    &-arrow
+      display: none
+    
 
 @media screen and (max-width: 320px)
   .navbar__title
