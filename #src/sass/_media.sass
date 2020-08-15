@@ -65,6 +65,11 @@
     &-item
       &__size
         margin-bottom: 40px
+  .work
+    &-reward
+      &__item
+        &-size
+          margin-right: 40px
 @media screen and (max-width: 992px) 
   .container
     max-width: 960px
@@ -127,7 +132,16 @@
         &-size
           margin-right: 20px
           margin-bottom: 30px
-      
+  .work
+    &-reward
+      &__image-left
+        left: 15px
+      &__image-right
+        right: 15px
+      &__item
+        &:nth-child(even)
+          display: none
+          
 @media screen and (max-width: 768px) 
   .container
     max-width: 720px
@@ -224,6 +238,17 @@
     &__number     
       margin-bottom: 35px
 
+  .work
+    &-reward
+      &__image-left
+        left: 15px
+      &__image-right
+        right: 15px
+      &__item
+        &-size
+          margin-right: 0px
+        &:last-child
+          display: none
 
 @media screen and (max-width: 576px)
   .container
@@ -297,7 +322,12 @@
         &-size
           margin-right: 0px
           margin-bottom: 30px
-
+  .work
+    &-reward
+      &__image-left
+        left: 5px
+      &__image-right
+        right: 5px
 @media screen and (max-width: 320px)
   .navbar__title
     display: none
