@@ -30,6 +30,7 @@
     "gulp-ttf2eot": "^1.1.2",
     "gulp-ttf2woff": "^1.1.1",
     "gulp-ttf2woff2": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
     "gulp-webp": "^4.0.1",
     "gulp-webp-css": "^1.1.0",
     "gulp-webp-html": "^1.0.2",

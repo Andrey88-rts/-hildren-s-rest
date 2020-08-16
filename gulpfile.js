@@ -18,7 +18,7 @@ const webP = require('gulp-webp');
 const webpHTML = require('gulp-webp-html');
 const webpCSS = require('gulp-webp-css');
 const cleanDir = require('gulp-clean-dir');
-
+const uglify = require('gulp-uglify');
 
 function browserSync() {
   browsersync.init({
@@ -73,6 +73,16 @@ function css() {
     .pipe(browsersync.stream());
 }
 
+function js() {
+  return src("#src/js/**/*.js")    
+    .pipe(dest(output+"/js/"))
+    .pipe(uglify())
+    .pipe(rename({
+      extname: ".min.js"
+    }))
+    .pipe(dest(output+"/js/"));
+}
+
 function image() {
   return src("#src/img/**/*.{jpg,png,svg,gif,ico,webp}")
     .pipe(webP({
@@ -109,11 +119,15 @@ function watchFiles(params) {
   gulp.watch(["#src/*.html"], html);
   gulp.watch(["#src/sass/**/*.sass"], css);
   gulp.watch(["#src/img/**/*.{jpg,png,svg,gif,ico,webp}"], image);
+  gulp.watch(["#src/js/**/*.js"], js);
+
 }
 
-const out = gulp.series(clean, gulp.parallel(norm, image, css, html));
+const out = gulp.series(clean, gulp.parallel(norm, js, image, css, html));
 const watch = gulp.parallel(out, watchFiles, browserSync);
 
+
+exports.js = js;
 exports.image = image;
 exports.norm = norm;
 exports.css = css;
